@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>P5 Speech</title>
+</head>
+<body>
+    <script src="p5.js"></script>
+    <script src="p5.speech.js"></script>
+    <script>
+        var foo = new p5.Speech(); // speech synthesis object
+        foo.setLang("es-ES")
+        document.addEventListener("mouseup", speak)
+        
+        function speak(){
+            foo.listVoices()
+            foo.setVoice("Amelie")
+            foo.speak('Hola Remi, viejo, hazte una y deja dormir a tu mama. Vamos!'); // say something
+        }
+        
+    </script>
+</body>
+</html>
